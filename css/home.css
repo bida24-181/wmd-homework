@@ -1,0 +1,163 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.m-stripes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(to right, #00ADEF 0%, #003366 33%, #ED1C24 66%);
+    color: white;
+}
+
+    .m-stripes .brand {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+        .m-stripes .brand img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .m-stripes .brand h1 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: white;
+        }
+
+            .m-stripes .brand h1 strong {
+                font-weight: 700;
+            }
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        transition: color 0.3s;
+    }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #00aced;
+        }
+
+.search-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.slideshow {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+    .hero-text h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+
+
+.container {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+    .container h2 {
+        font-size: 2rem;
+        color: #222;
+        margin-bottom: 15px;
+    }
+
+    .container p,
+    .container ul {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .container ul {
+        padding-left: 20px;
+        list-style-type: disc;
+    }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    background-color: #f4f4f4;
+    color: #555;
+}
+
+
+@media (max-width: 768px) {
+    .m-stripes {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .container h2 {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,97 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.feedback-header {
+    background-color: #003366;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+    .feedback-header h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .feedback-header p {
+        font-size: 1rem;
+    }
+
+
+.form-container {
+    flex: 1;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    width: 100%;
+    padding: 14px;
+    background-color: #00aced;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    form button:hover {
+        background-color: #0087ba;
+    }
+
+
+.feedback-footer {
+    background-color: #1a1a1a;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+}
+
+
+@media (max-width: 600px) {
+    .feedback-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .form-container {
+        margin: 20px;
+        padding: 15px;
+    }
+}
