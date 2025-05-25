@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | BMW M3 Legacy</title>
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+</head>
+<body>
+    <header class="m-stripes">
+        <div class="brand">
+            <img src="pictures/bmw_logo_PNG19699.png" alt="BMW Logo" />
+            <h1>Sheer Driving <strong>Pleasure</strong></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="History.html">M3 History</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="FeedbackForm.html">Feedback</a></li>
+                <li><a href="about page.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>BMW M3 Generations Gallery</h2>
+        <p>Explore a visual timeline of the legendary BMW M3 series. Click an image to enlarge it.</p>
+        <div class="gallery-grid">
+            <figure>
+                <img src="pictures/BMW E30 M3 black.jpeg" alt="E30 M3" class="gallery-img" loading="lazy" />
+                <figcaption>E30 M3 (1986–1991)</figcaption>
+            </figure>
+            <figure>
+                <img src="pictures/e36.jpeg" alt="E36 M3" class="gallery-img" loading="lazy" />
+                <figcaption>E36 M3 (1992–1999)</figcaption>
+            </figure>
+            <figure>
+                <img src="pictures/e46.jpeg" alt="E46 M3" class="gallery-img" loading="lazy" />
+                <figcaption>E46 M3 (2000–2006)</figcaption>
+            </figure>
+            <figure>
+                <img src="pictures/BMW M3 e92.jpeg" alt="E92 M3" class="gallery-img" loading="lazy" />
+                <figcaption>E92 M3 (2007–2013)</figcaption>
+            </figure>
+            <figure>
+                <img src="pictures/M3.jpeg" alt="F80 M3" class="gallery-img" loading="lazy" />
+                <figcaption>F80 M3 (2014–2020)</figcaption>
+            </figure>
+            <figure>
+                <img src="pictures/back.jpeg" alt="G80 M3" class="gallery-img" loading="lazy" />
+                <figcaption>G80 M3 (2020–Present)</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Expanded BMW M3 Image">
+    </div>
+
+    <footer class="feedback-footer">
+        <p>&copy; 2025 BMW M3 Legacy. Created for educational purposes.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.querySelector('.close');
+
+            document.querySelectorAll('.gallery-img').forEach(img => {
+                img.addEventListener('click', () => {
+                    lightbox.style.display = 'flex';
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                });
+            });
+
+            closeBtn.addEventListener('click', () => {
+                lightbox.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
